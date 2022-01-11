@@ -226,6 +226,11 @@
                                                     <state key="selected" image="heart.fill" catalog="system">
                                                         <color key="titleColor" systemColor="systemPinkColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="favouriteButtonTapped" destination="wJ0-cL-FBf" eventType="touchUpInside" id="SHz-OL-Blu"/>
+                                                        <action selector="touchedDown:" destination="wJ0-cL-FBf" eventType="touchUpInside" id="x0Y-QZ-OqS"/>
+                                                        <action selector="touchedUpInside:" destination="wJ0-cL-FBf" eventType="touchUpInside" id="Q2Z-hm-YSZ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -238,6 +243,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favouriteButton" destination="Y0R-06-Wxq" id="531-So-T8L"/>
                                     <outlet property="shoppingListItemLabel" destination="IbB-5G-XAN" id="z7E-i9-IRk"/>
                                     <outlet property="shoppingListNoteLabel" destination="CNw-3m-X9e" id="L6m-h5-J32"/>
                                     <segue destination="Zdt-Fn-bdA" kind="presentation" id="pze-Uu-rhU"/>
