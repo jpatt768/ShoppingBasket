@@ -15,8 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="bcy-d7-AC7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9bl-0u-zt3">
+                                <rect key="frame" x="30" y="104" width="354" height="649"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="imh-zx-M0k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9bl-0u-zt3" firstAttribute="leading" secondItem="imh-zx-M0k" secondAttribute="leading" constant="30" id="DfR-nC-QEY"/>
+                            <constraint firstItem="imh-zx-M0k" firstAttribute="bottom" secondItem="9bl-0u-zt3" secondAttribute="bottom" constant="60" id="JUG-2m-M7G"/>
+                            <constraint firstItem="imh-zx-M0k" firstAttribute="trailing" secondItem="9bl-0u-zt3" secondAttribute="trailing" constant="30" id="ULe-V5-sdg"/>
+                            <constraint firstItem="9bl-0u-zt3" firstAttribute="top" secondItem="imh-zx-M0k" secondAttribute="top" constant="60" id="qd0-d1-Z7H"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shop Finder" image="map" catalog="system" selectedImage="map" id="hqt-hu-Fpr"/>
                 </viewController>

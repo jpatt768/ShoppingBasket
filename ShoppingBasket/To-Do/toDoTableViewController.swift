@@ -15,11 +15,6 @@ class toDoTableViewController: UITableViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
 
-            // Uncomment the following line to preserve selection between presentations
-            // self.clearsSelectionOnViewWillAppear = false
-
-            // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-            // self.navigationItem.rightBarButtonItem = self.editButtonItem
         }
 
         // MARK: - Table view data source
@@ -54,14 +49,12 @@ class toDoTableViewController: UITableViewController {
             }
         }
         
-
-        
         override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
             let movedItem = toDoItems.remove(at: fromIndexPath.row)
             toDoItems.insert(movedItem, at: to.row)
         }
         
-  
+//  MARK: - Segues to add/edit items
     @IBSegueAction func addEditToDoSegue(_ coder: NSCoder, sender: Any?) -> AddEditToDoTableViewController? {
         if let cell = sender as? UITableViewCell,
                    let indexPath = tableView.indexPath(for: cell){

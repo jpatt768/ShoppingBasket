@@ -20,8 +20,10 @@ class ShoppingListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
+    
+//    MARK: - Favourite heart animation
     @IBAction func favouriteButtonTapped() {
         isFavourite.toggle()
     }
