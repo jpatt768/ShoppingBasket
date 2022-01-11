@@ -73,19 +73,16 @@ class shoppingListTableViewController: UITableViewController {
         shoppingItems.insert(movedItem, at: to.row)
     }
     
- 
-    
     
     @IBSegueAction func addEditShoppingItem(_ coder: NSCoder, sender: Any?) -> AddEditShoppingItemsTableViewController? {
-       if let cell = sender as? UITableViewCell,
-          let indexPath = tableView.indexPath(for: cell){
-        let itemToEdit = shoppingItems[indexPath.row]
-        return AddEditShoppingItemsTableViewController(coder: coder, shoppingList: itemToEdit)
-       }else{
-        return AddEditShoppingItemsTableViewController(coder: coder, shoppingList: nil)
-    }
-    }
-        
+        if let cell = sender as? UITableViewCell,
+           let indexPath = tableView.indexPath(for: cell){
+         let itemToEdit = shoppingItems[indexPath.row]
+         return AddEditShoppingItemsTableViewController(coder: coder, shoppingList: itemToEdit)
+        }else{
+         return AddEditShoppingItemsTableViewController(coder: coder, shoppingList: nil)
+     }
+     }
       
         @IBAction func unwindToShoppingListTableView(segue: UIStoryboardSegue) {
             guard segue.identifier == "saveUnwind",
@@ -103,13 +100,13 @@ class shoppingListTableViewController: UITableViewController {
             }
         }
 //        }
-    /*
+  
     // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+//    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    /*
+//        return true
+//    }
+    
 
     /*
     // MARK: - Navigation
@@ -122,6 +119,6 @@ class shoppingListTableViewController: UITableViewController {
     */
 
 }
- }*/*/
-    }
+
+    
 

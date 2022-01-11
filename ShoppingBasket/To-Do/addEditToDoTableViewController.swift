@@ -1,20 +1,20 @@
 //
-//  addEditShoppingItemsTableViewController.swift
+//  addEditToDoTableViewController.swift
 //  ShoppingBasket
 //
-//  Created by Jayden Patterson on 2022/01/07.
+//  Created by Jayden Patterson on 2022/01/11.
 //
 
 import UIKit
 
+class AddEditToDoTableViewController: UITableViewController {
 
-class AddEditShoppingItemsTableViewController: UITableViewController {
-    @IBOutlet var itemTextField: UITextField!
-    @IBOutlet var noteTextField: UITextField!
+
+    @IBOutlet var toDoItemTextField: UITextField!
     
-    var shoppingList: ShoppingList?
-    init?(coder: NSCoder, shoppingList: ShoppingList?) {
-        self.shoppingList = shoppingList
+    var toDo: ToDoList?
+    init?(coder: NSCoder, toDo: ToDoList?) {
+        self.toDo = toDo
         super.init(coder: coder)
     }
     
@@ -24,9 +24,8 @@ class AddEditShoppingItemsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let shoppingList = shoppingList {
-            itemTextField.text = shoppingList.item
-            noteTextField.text = shoppingList.note
+        if let toDo = toDo {
+            toDoItemTextField.text = toDo.item
             title = "Edit Item"
         }else{
             title = "Add Item"
@@ -43,14 +42,9 @@ class AddEditShoppingItemsTableViewController: UITableViewController {
     
         guard segue.identifier == "saveUnwind" else { return }
     
-        let item = itemTextField.text!
-        let note = noteTextField.text ?? ""
+        let item = toDoItemTextField.text!
      
-        shoppingList = ShoppingList(item: item, note: note)
+        toDo = ToDoList(item: item)
     }
-
-    // MARK: - Table view data source
-
-   
 
 }

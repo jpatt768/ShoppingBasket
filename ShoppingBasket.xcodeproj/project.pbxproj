@@ -18,6 +18,10 @@
 		B2B07BAE2785D00900974BF2 /* shoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B07BAD2785D00900974BF2 /* shoppingListTableViewCell.swift */; };
 		B2B07BB22785D74F00974BF2 /* shoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B07BB12785D74F00974BF2 /* shoppingListTableViewController.swift */; };
 		B2B07BB52788460400974BF2 /* addEditShoppingItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B07BB42788460400974BF2 /* addEditShoppingItemsTableViewController.swift */; };
+		B2FA2F51278D290A0098F18C /* toDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F50278D290A0098F18C /* toDoTableViewController.swift */; };
+		B2FA2F53278D296A0098F18C /* toDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F52278D296A0098F18C /* toDoTableViewCell.swift */; };
+		B2FA2F55278D298B0098F18C /* addEditToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F54278D298B0098F18C /* addEditToDoTableViewController.swift */; };
+		B2FA2F57278D2AA10098F18C /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F56278D2AA10098F18C /* toDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		B2B07BAD2785D00900974BF2 /* shoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingListTableViewCell.swift; sourceTree = "<group>"; };
 		B2B07BB12785D74F00974BF2 /* shoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingListTableViewController.swift; sourceTree = "<group>"; };
 		B2B07BB42788460400974BF2 /* addEditShoppingItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addEditShoppingItemsTableViewController.swift; sourceTree = "<group>"; };
+		B2FA2F50278D290A0098F18C /* toDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoTableViewController.swift; sourceTree = "<group>"; };
+		B2FA2F52278D296A0098F18C /* toDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoTableViewCell.swift; sourceTree = "<group>"; };
+		B2FA2F54278D298B0098F18C /* addEditToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addEditToDoTableViewController.swift; sourceTree = "<group>"; };
+		B2FA2F56278D2AA10098F18C /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +113,11 @@
 		B2B07B38277B126100974BF2 /* ShoppingBasket */ = {
 			isa = PBXGroup;
 			children = (
+				B2FA2F4F278D28F50098F18C /* To-Do */,
 				B2B07BB32785D7ED00974BF2 /* ShoppingList */,
 				B2B07B3F277B126100974BF2 /* Main.storyboard */,
 				B2B07BAB2785CE9800974BF2 /* shoppingBasket.swift */,
+				B2FA2F56278D2AA10098F18C /* toDo.swift */,
 				B2B07B39277B126100974BF2 /* AppDelegate.swift */,
 				B2B07B3B277B126100974BF2 /* SceneDelegate.swift */,
 				B2B07B42277B126500974BF2 /* Assets.xcassets */,
@@ -143,6 +153,16 @@
 				B2B07BB42788460400974BF2 /* addEditShoppingItemsTableViewController.swift */,
 			);
 			path = ShoppingList;
+			sourceTree = "<group>";
+		};
+		B2FA2F4F278D28F50098F18C /* To-Do */ = {
+			isa = PBXGroup;
+			children = (
+				B2FA2F50278D290A0098F18C /* toDoTableViewController.swift */,
+				B2FA2F52278D296A0098F18C /* toDoTableViewCell.swift */,
+				B2FA2F54278D298B0098F18C /* addEditToDoTableViewController.swift */,
+			);
+			path = "To-Do";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +297,13 @@
 			files = (
 				B2B07B3A277B126100974BF2 /* AppDelegate.swift in Sources */,
 				B2B07BB22785D74F00974BF2 /* shoppingListTableViewController.swift in Sources */,
+				B2FA2F55278D298B0098F18C /* addEditToDoTableViewController.swift in Sources */,
+				B2FA2F57278D2AA10098F18C /* toDo.swift in Sources */,
 				B2B07BB52788460400974BF2 /* addEditShoppingItemsTableViewController.swift in Sources */,
+				B2FA2F53278D296A0098F18C /* toDoTableViewCell.swift in Sources */,
 				B2B07BAE2785D00900974BF2 /* shoppingListTableViewCell.swift in Sources */,
 				B2B07BAC2785CE9800974BF2 /* shoppingBasket.swift in Sources */,
+				B2FA2F51278D290A0098F18C /* toDoTableViewController.swift in Sources */,
 				B2B07B3C277B126100974BF2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
