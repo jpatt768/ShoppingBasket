@@ -42,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12BE1D78282B5A31465BC2CE /* Pods-ShoppingBasket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingBasket.release.xcconfig"; path = "Target Support Files/Pods-ShoppingBasket/Pods-ShoppingBasket.release.xcconfig"; sourceTree = "<group>"; };
+		817285426F00AA6165254E0B /* Pods-ShoppingBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingBasket.debug.xcconfig"; path = "Target Support Files/Pods-ShoppingBasket/Pods-ShoppingBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		B2B07B36277B126100974BF2 /* ShoppingBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B07B39277B126100974BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B07B3B277B126100974BF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
