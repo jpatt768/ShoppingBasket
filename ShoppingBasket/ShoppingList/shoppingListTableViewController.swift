@@ -39,7 +39,9 @@ class shoppingListTableViewController: UITableViewController {
 
         let shoppingList = shoppingItems[indexPath.row]
         cell.update(with: shoppingList)
+        
         cell.showsReorderControl = true
+        
         return cell
     }
 

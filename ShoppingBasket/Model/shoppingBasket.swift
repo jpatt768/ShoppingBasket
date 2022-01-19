@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShoppingList: Codable {
+public struct ShoppingList: Codable {
     var item: String
     var note: String
 }

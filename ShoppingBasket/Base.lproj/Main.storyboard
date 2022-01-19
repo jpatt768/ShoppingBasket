@@ -30,6 +30,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shop Finder" image="map" catalog="system" selectedImage="map" id="hqt-hu-Fpr"/>
+                    <connections>
+                        <outlet property="MKMap" destination="9bl-0u-zt3" id="Gh1-a4-mET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmP-xj-SCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +206,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="51"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="6wi-9c-QTX"/>
-                                                        <constraint firstAttribute="width" secondItem="Xxj-aU-bij" secondAttribute="height" id="KBO-77-L4n"/>
+                                                        <constraint firstAttribute="width" secondItem="Xxj-aU-bij" secondAttribute="height" id="Dpz-F3-H2s"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RkU-5d-tcD">
@@ -239,6 +242,7 @@
                                                         <color key="titleColor" systemColor="systemPinkColor"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="addFavouriteShoppingItem:" destination="72D-Ii-obe" eventType="touchUpInside" id="uaA-P2-c6u"/>
                                                         <action selector="favouriteButtonTapped" destination="wJ0-cL-FBf" eventType="touchUpInside" id="SHz-OL-Blu"/>
                                                         <action selector="touchedDown:" destination="wJ0-cL-FBf" eventType="touchUpInside" id="mfb-S9-ChA"/>
                                                         <action selector="touchedUpInside:" destination="wJ0-cL-FBf" eventType="touchUpInside" id="Q2Z-hm-YSZ"/>
@@ -277,6 +281,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMN-XW-aYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="72D-Ii-obe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-446.37681159420293" y="685.71428571428567"/>
         </scene>
@@ -374,15 +379,15 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="ShoppingBasketIcon" translatesAutoresizingMaskIntoConstraints="NO" id="POG-lE-7Jw">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="51"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="POG-lE-7Jw" secondAttribute="height" id="XZ9-u2-3dV"/>
+                                                        <constraint firstAttribute="width" secondItem="POG-lE-7Jw" secondAttribute="height" id="21C-4T-YdS"/>
                                                         <constraint firstAttribute="width" constant="60" id="tO9-4L-ojg"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-z2-khl">
-                                                    <rect key="frame" x="68" y="0.0" width="272" height="51"/>
+                                                    <rect key="frame" x="68" y="0.0" width="330" height="51"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU0-at-dg0" userLabel="Favourite Item Label">
-                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Kjt-Sq-kdI"/>
                                                             </constraints>
@@ -391,25 +396,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7H-Yt-V0q" userLabel="Favourite Note Label">
-                                                            <rect key="frame" x="0.0" y="30" width="272" height="21"/>
+                                                            <rect key="frame" x="0.0" y="30" width="330" height="21"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dva-DJ-xU5" userLabel="Add Button">
-                                                    <rect key="frame" x="348" y="0.0" width="50" height="51"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="KaL-vP-h71"/>
-                                                    </constraints>
-                                                    <state key="normal" image="plus" catalog="system">
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
-                                                    </state>
-                                                    <state key="selected" image="heart.fill" catalog="system">
-                                                        <color key="titleColor" systemColor="systemPinkColor"/>
-                                                    </state>
-                                                </button>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -420,6 +413,10 @@
                                         <constraint firstAttribute="trailing" secondItem="Mk8-st-mJR" secondAttribute="trailing" constant="8" id="eHa-35-NGX"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="favouriteItemLabel" destination="WU0-at-dg0" id="E2l-zG-vxI"/>
+                                    <outlet property="favouriteNoteLabel" destination="P7H-Yt-V0q" id="s6d-H9-bjq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -539,7 +536,6 @@
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

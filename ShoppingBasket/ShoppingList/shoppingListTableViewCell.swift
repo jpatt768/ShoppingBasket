@@ -8,12 +8,13 @@
 import UIKit
 
 class ShoppingListTableViewCell: UITableViewCell {
+    
     var isFavourite: Bool = true {
         didSet {
             favouriteButton.isSelected = isFavourite
         }
     }
-    
+
     @IBOutlet var favouriteButton: UIButton!
     @IBOutlet var shoppingListItemLabel: UILabel!
     @IBOutlet var shoppingListNoteLabel: UILabel!
@@ -23,10 +24,24 @@ class ShoppingListTableViewCell: UITableViewCell {
 
     }
     
+    
 //    MARK: - Favourite heart animation
     @IBAction func favouriteButtonTapped() {
         isFavourite.toggle()
+//        func addToFavourite(with itemLabel: ShoppingList, itemNotes: ShoppingList){
+//            if isFavourite{
+//                shoppingListItemLabel.text = favouriteItems.append(itemLabel)
+//                shoppingListNoteLabel.text = favouriteItems.append(itemNotes)
+
+//
+//            }
+            //Just added
+      
+//        }
+        
     }
+    
+    
     @IBAction func touchedDown(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3){
             self.favouriteButton.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)

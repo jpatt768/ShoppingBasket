@@ -9,6 +9,9 @@ import UIKit
 
 class FavouritesTableViewCell: UITableViewCell {
 
+    @IBOutlet var favouriteItemLabel: UILabel!
+    @IBOutlet var favouriteNoteLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
