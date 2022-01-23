@@ -22,11 +22,14 @@
 		B2B07BAE2785D00900974BF2 /* shoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B07BAD2785D00900974BF2 /* shoppingListTableViewCell.swift */; };
 		B2B07BB22785D74F00974BF2 /* shoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B07BB12785D74F00974BF2 /* shoppingListTableViewController.swift */; };
 		B2B07BB52788460400974BF2 /* addEditShoppingItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B07BB42788460400974BF2 /* addEditShoppingItemsTableViewController.swift */; };
+		B2D05E6727995B5400C4C147 /* ShopFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D05E6627995B5400C4C147 /* ShopFinder.swift */; };
+		B2D05E6B2799615000C4C147 /* GooglePlacesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D05E6A2799615000C4C147 /* GooglePlacesCoordinator.swift */; };
+		B2D05E7127997A4600C4C147 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D05E7027997A4600C4C147 /* Results.swift */; };
+		B2D05E73279BD6ED00C4C147 /* UserCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D05E72279BD6ED00C4C147 /* UserCache.swift */; };
 		B2FA2F51278D290A0098F18C /* toDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F50278D290A0098F18C /* toDoTableViewController.swift */; };
 		B2FA2F53278D296A0098F18C /* toDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F52278D296A0098F18C /* toDoTableViewCell.swift */; };
 		B2FA2F55278D298B0098F18C /* addEditToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F54278D298B0098F18C /* addEditToDoTableViewController.swift */; };
 		B2FA2F57278D2AA10098F18C /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F56278D2AA10098F18C /* toDo.swift */; };
-		B2FA2F5B278D69280098F18C /* GooglePlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FA2F5A278D69280098F18C /* GooglePlaces.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +72,14 @@
 		B2B07BAD2785D00900974BF2 /* shoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingListTableViewCell.swift; sourceTree = "<group>"; };
 		B2B07BB12785D74F00974BF2 /* shoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingListTableViewController.swift; sourceTree = "<group>"; };
 		B2B07BB42788460400974BF2 /* addEditShoppingItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addEditShoppingItemsTableViewController.swift; sourceTree = "<group>"; };
+		B2D05E6627995B5400C4C147 /* ShopFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFinder.swift; sourceTree = "<group>"; };
+		B2D05E6A2799615000C4C147 /* GooglePlacesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesCoordinator.swift; sourceTree = "<group>"; };
+		B2D05E7027997A4600C4C147 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		B2D05E72279BD6ED00C4C147 /* UserCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCache.swift; sourceTree = "<group>"; };
 		B2FA2F50278D290A0098F18C /* toDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoTableViewController.swift; sourceTree = "<group>"; };
 		B2FA2F52278D296A0098F18C /* toDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoTableViewCell.swift; sourceTree = "<group>"; };
 		B2FA2F54278D298B0098F18C /* addEditToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addEditToDoTableViewController.swift; sourceTree = "<group>"; };
 		B2FA2F56278D2AA10098F18C /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
-		B2FA2F5A278D69280098F18C /* GooglePlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaces.swift; sourceTree = "<group>"; };
 		E744409756C04CC5C2A86999 /* Pods_ShoppingBasket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingBasket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -213,6 +219,7 @@
 				B2B07BAB2785CE9800974BF2 /* shoppingBasket.swift */,
 				B2FA2F56278D2AA10098F18C /* toDo.swift */,
 				B23B48B927902998002040CA /* Favourites.swift */,
+				B2D05E72279BD6ED00C4C147 /* UserCache.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,7 +227,9 @@
 		B2FA2F59278D690E0098F18C /* GooglePlaces */ = {
 			isa = PBXGroup;
 			children = (
-				B2FA2F5A278D69280098F18C /* GooglePlaces.swift */,
+				B2D05E6627995B5400C4C147 /* ShopFinder.swift */,
+				B2D05E6A2799615000C4C147 /* GooglePlacesCoordinator.swift */,
+				B2D05E7027997A4600C4C147 /* Results.swift */,
 			);
 			path = GooglePlaces;
 			sourceTree = "<group>";
@@ -404,13 +413,16 @@
 				B2B07BB22785D74F00974BF2 /* shoppingListTableViewController.swift in Sources */,
 				B2FA2F55278D298B0098F18C /* addEditToDoTableViewController.swift in Sources */,
 				B2FA2F57278D2AA10098F18C /* toDo.swift in Sources */,
-				B2FA2F5B278D69280098F18C /* GooglePlaces.swift in Sources */,
+				B2D05E7127997A4600C4C147 /* Results.swift in Sources */,
 				B23B48B827902712002040CA /* FavouritesTableViewCell.swift in Sources */,
 				B23B48B62790219F002040CA /* FavouritesTableViewController.swift in Sources */,
+				B2D05E6727995B5400C4C147 /* ShopFinder.swift in Sources */,
+				B2D05E6B2799615000C4C147 /* GooglePlacesCoordinator.swift in Sources */,
 				B2B07BB52788460400974BF2 /* addEditShoppingItemsTableViewController.swift in Sources */,
 				B2FA2F53278D296A0098F18C /* toDoTableViewCell.swift in Sources */,
 				B2B07BAE2785D00900974BF2 /* shoppingListTableViewCell.swift in Sources */,
 				B2B07BAC2785CE9800974BF2 /* shoppingBasket.swift in Sources */,
+				B2D05E73279BD6ED00C4C147 /* UserCache.swift in Sources */,
 				B2FA2F51278D290A0098F18C /* toDoTableViewController.swift in Sources */,
 				B2B07B3C277B126100974BF2 /* SceneDelegate.swift in Sources */,
 			);

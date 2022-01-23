@@ -7,7 +7,13 @@
 
 import Foundation
 
-public struct ShoppingList: Codable {
-    var item: String
+public struct ShopItem: Codable {
+    var name: String
     var note: String
+    var favorite: Bool
 }
+
+struct ShopItems: Codable {
+    let items: [ShopItem]
+}
+

@@ -8,36 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shop Finder View-->
-        <scene sceneID="4Qz-QK-RVl">
-            <objects>
-                <viewController title="Shop Finder View" id="JAS-EP-ceX" customClass="ShopFinderViewController" customModule="ShoppingBasket" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bcy-d7-AC7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9bl-0u-zt3">
-                                <rect key="frame" x="30" y="104" width="354" height="649"/>
-                            </mapView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="imh-zx-M0k"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="9bl-0u-zt3" firstAttribute="leading" secondItem="imh-zx-M0k" secondAttribute="leading" constant="30" id="DfR-nC-QEY"/>
-                            <constraint firstItem="imh-zx-M0k" firstAttribute="bottom" secondItem="9bl-0u-zt3" secondAttribute="bottom" constant="60" id="JUG-2m-M7G"/>
-                            <constraint firstItem="imh-zx-M0k" firstAttribute="trailing" secondItem="9bl-0u-zt3" secondAttribute="trailing" constant="30" id="ULe-V5-sdg"/>
-                            <constraint firstItem="9bl-0u-zt3" firstAttribute="top" secondItem="imh-zx-M0k" secondAttribute="top" constant="60" id="qd0-d1-Z7H"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Shop Finder" image="map" catalog="system" selectedImage="map" id="hqt-hu-Fpr"/>
-                    <connections>
-                        <outlet property="MKMap" destination="9bl-0u-zt3" id="Gh1-a4-mET"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kmP-xj-SCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="213.04347826086959" y="685.71428571428567"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VJa-6R-ddj">
             <objects>
@@ -50,14 +20,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="a8m-dd-bQa" kind="relationship" relationship="viewControllers" id="EJv-ta-iWa"/>
-                        <segue destination="JAS-EP-ceX" kind="relationship" relationship="viewControllers" id="Upb-DU-xsq"/>
                         <segue destination="ySJ-Q2-rmj" kind="relationship" relationship="viewControllers" id="o0B-eO-E3Q"/>
-                        <segue destination="WY3-FD-4mq" kind="relationship" relationship="viewControllers" id="tfA-Ei-x4m"/>
+                        <segue destination="Jpg-z6-ogv" kind="relationship" relationship="viewControllers" id="hXx-Da-MoB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0P-PS-rnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="-226"/>
+            <point key="canvasLocation" x="-146" y="-147"/>
         </scene>
         <!--Shopping List-->
         <scene sceneID="fFP-P4-70v">
@@ -78,7 +47,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CN7-K4-Nvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1117" y="686"/>
+            <point key="canvasLocation" x="-1809" y="686"/>
         </scene>
         <!--Add New Item-->
         <scene sceneID="7Ar-fW-Uii">
@@ -165,7 +134,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umi-Yh-Zv3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="c4F-xu-aQ1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="1359"/>
+            <point key="canvasLocation" x="-1136" y="1359"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Jp-Qx-yam">
@@ -181,7 +150,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85s-JY-Yb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1117" y="1359"/>
+            <point key="canvasLocation" x="-1807" y="1359"/>
         </scene>
         <!--Shopping List-->
         <scene sceneID="hjJ-xT-mMS">
@@ -283,7 +252,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMN-XW-aYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="72D-Ii-obe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-446.37681159420293" y="685.71428571428567"/>
+            <point key="canvasLocation" x="-1138" y="686"/>
+        </scene>
+        <!--Shop Finder-->
+        <scene sceneID="qBm-aV-YqP">
+            <objects>
+                <viewController id="eZL-bk-otU" customClass="ShopFinderViewController" customModule="ShoppingBasket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cak-XY-TMi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2zr-kJ-urh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shop Finder" id="AlI-Bh-HNu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oaw-qC-14r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="207" y="686"/>
         </scene>
         <!--To-Do-->
         <scene sceneID="EzT-F5-7pK">
@@ -356,93 +341,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHx-hs-TJU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1545" y="686"/>
-        </scene>
-        <!--Favourites-->
-        <scene sceneID="SyE-Ao-Jqh">
-            <objects>
-                <tableViewController id="lUA-jd-CjE" customClass="FavouritesTableViewController" customModule="ShoppingBasket" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="09o-tm-QXK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouriteCell" rowHeight="67" id="Hsj-FA-Put" customClass="FavouritesTableViewCell" customModule="ShoppingBasket" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hsj-FA-Put" id="jBs-gw-pPc">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mk8-st-mJR">
-                                            <rect key="frame" x="8" y="8" width="398" height="51"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="ShoppingBasketIcon" translatesAutoresizingMaskIntoConstraints="NO" id="POG-lE-7Jw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="51"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="POG-lE-7Jw" secondAttribute="height" id="21C-4T-YdS"/>
-                                                        <constraint firstAttribute="width" constant="60" id="tO9-4L-ojg"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-z2-khl">
-                                                    <rect key="frame" x="68" y="0.0" width="330" height="51"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU0-at-dg0" userLabel="Favourite Item Label">
-                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="Kjt-Sq-kdI"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7H-Yt-V0q" userLabel="Favourite Note Label">
-                                                            <rect key="frame" x="0.0" y="30" width="330" height="21"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Mk8-st-mJR" firstAttribute="top" secondItem="jBs-gw-pPc" secondAttribute="top" constant="8" id="CMS-DP-4Zk"/>
-                                        <constraint firstItem="Mk8-st-mJR" firstAttribute="leading" secondItem="jBs-gw-pPc" secondAttribute="leading" constant="8" id="OcQ-Mh-Xos"/>
-                                        <constraint firstAttribute="bottom" secondItem="Mk8-st-mJR" secondAttribute="bottom" constant="8" id="bGZ-jS-22e"/>
-                                        <constraint firstAttribute="trailing" secondItem="Mk8-st-mJR" secondAttribute="trailing" constant="8" id="eHa-35-NGX"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="favouriteItemLabel" destination="WU0-at-dg0" id="E2l-zG-vxI"/>
-                                    <outlet property="favouriteNoteLabel" destination="P7H-Yt-V0q" id="s6d-H9-bjq"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Favourites" id="E7x-Jm-Jwi"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ipj-UX-wID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2866.666666666667" y="685.71428571428567"/>
-        </scene>
-        <!--Favourites-->
-        <scene sceneID="a9d-Yi-faL">
-            <objects>
-                <navigationController id="WY3-FD-4mq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favourites" image="heart" catalog="system" selectedImage="heart" id="lfi-Q4-Btv"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nCR-ME-fcC">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="lUA-jd-CjE" kind="relationship" relationship="rootViewController" id="vzd-xG-dJL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1RI-Nu-Lfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2203" y="686"/>
         </scene>
         <!--To-Do-->
         <scene sceneID="EVe-lg-OlZ">
@@ -523,6 +421,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKI-hO-2jS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="874" y="1359"/>
+        </scene>
+        <!--Shop Finder-->
+        <scene sceneID="Th2-aa-HUx">
+            <objects>
+                <navigationController id="Jpg-z6-ogv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shop Finder" image="map" catalog="system" id="vKZ-fN-gd0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="woV-3K-Zri">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eZL-bk-otU" kind="relationship" relationship="rootViewController" id="Bsy-X3-GHU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5y5-Uf-6h8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-464" y="686"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

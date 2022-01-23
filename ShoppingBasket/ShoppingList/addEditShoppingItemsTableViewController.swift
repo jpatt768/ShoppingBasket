@@ -12,24 +12,27 @@ class AddEditShoppingItemsTableViewController: UITableViewController {
     @IBOutlet var itemTextField: UITextField!
     @IBOutlet var noteTextField: UITextField!
     
-    var shoppingList: ShoppingList?
-    init?(coder: NSCoder, shoppingList: ShoppingList?) {
-        self.shoppingList = shoppingList
+    var item: ShopItem?
+    let addType: Bool
+    init?(coder: NSCoder, item: ShopItem? = nil, addType: Bool) {
+        self.item = item
+        self.addType = addType
         super.init(coder: coder)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let shoppingList = shoppingList {
-            itemTextField.text = shoppingList.item
-            noteTextField.text = shoppingList.note
-            title = "Edit Item"
-        }else{
+        if addType {
             title = "Add Item"
+        } else {
+            itemTextField.text = item?.name
+            noteTextField.text = item?.note
+            title = "Edit Item"
         }
     }
     
@@ -38,9 +41,8 @@ class AddEditShoppingItemsTableViewController: UITableViewController {
     
         guard segue.identifier == "saveUnwind" else { return }
     
-        let item = itemTextField.text!
+        let name = itemTextField.text!
         let note = noteTextField.text ?? ""
-     
-        shoppingList = ShoppingList(item: item, note: note)
+        item = ShopItem(name: name, note: note, favorite: item?.favorite ?? false)
     }
 }
