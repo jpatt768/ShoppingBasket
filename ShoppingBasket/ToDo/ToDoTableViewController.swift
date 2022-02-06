@@ -1,24 +1,25 @@
 //
-//  shoppingListTableViewController.swift
+//  ToDoTableViewController.swift
 //  ShoppingBasket
 //
-//  Created by Jayden Patterson on 2022/01/05.
+//  Created by Jayden Patterson on 2022/02/01.
 //
 
 import UIKit
 
-class shoppingListTableViewController: UITableViewController {
-   
-    var items: [ShopItem] = []
+var items: [ToDoItem] = []
+
+class ToDoTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        items = ShopItemCache.getItems()
+        items = ShopItemCache.getToDoItems()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
     }
     
     // MARK: - Table view data source
@@ -29,18 +30,16 @@ class shoppingListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "shoppingListCell", for: indexPath) as! ShoppingListTableViewCell
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "toDoListCell", for: indexPath) as! ToDoTableViewCell
+        
         let item = items[indexPath.row]
-        cell.delegate = self
-        cell.index = indexPath.row
-        cell.update(with: item)
-        
+        cell.updateToDo(with: item)
         cell.showsReorderControl = true
-        
+   
         return cell
     }
 
@@ -54,55 +53,47 @@ class shoppingListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         let movedItem = items.remove(at: fromIndexPath.row)
         items.insert(movedItem, at: to.row)
-        ShopItemCache.setItems(items: items)
+        ShopItemCache.setToDoItems(toDoItems: items)
     }
     
 //    MARK: - Segues to add / edit items
-    @IBSegueAction func addEditShoppingItem(_ coder: NSCoder, sender: Any?) -> AddEditShoppingItemsTableViewController? {
-        if let cell = sender as? UITableViewCell,
+    @IBSegueAction func addEditToDoItem(_ coder: NSCoder, sender: Any?) -> AddEditToDoTableViewController? {
+            if let cell = sender as? UITableViewCell,
            let indexPath = tableView.indexPath(for: cell){
             // edit
-         return AddEditShoppingItemsTableViewController(
+         return AddEditToDoTableViewController(
             coder: coder,
             item: items[indexPath.row],
             addType: false)
         }else{
             // add
-         return AddEditShoppingItemsTableViewController(
+         return AddEditToDoTableViewController(
             coder: coder,
             item: nil,
             addType: true)
-        }
+     }
      }
       
-        @IBAction func unwindToShoppingListTableView(segue: UIStoryboardSegue) {
-            guard segue.identifier == "saveUnwind",
+        @IBAction func unwindToToDoListTableView(segue: UIStoryboardSegue) {
+            guard segue.identifier == "saveToDoUnwind",
                 let sourceViewController = segue.source
-                   as? AddEditShoppingItemsTableViewController,
+                   as? AddEditToDoTableViewController,
                 let item = sourceViewController.item else { return }
-
+            
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 // edit
                 items[selectedIndexPath.row] = item
-                ShopItemCache.setItems(items: items)
+                ShopItemCache.setToDoItems(toDoItems: items)
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
                
             } else {
                 // add
                 let newIndexPath = IndexPath(row: items.count, section: 0)
                 items.append(item)
-                ShopItemCache.setItems(items: items)
+                ShopItemCache.setToDoItems(toDoItems: items)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
-                
+              
             }
         }
-}
-
-extension shoppingListTableViewController: ShoppingListTableViewCellDelegate {
-    func onFavoriteUpdated(_ cell: ShoppingListTableViewCell, on: Bool) {
-        items[cell.index].favorite = on
-        ShopItemCache.setItems(items: items)
-        cell.update(with: items[cell.index])
-    }
 }
 
