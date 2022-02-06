@@ -10,7 +10,6 @@
 		ABC7D678E1C71492AC43DBA6 /* Pods_ShoppingBasket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E744409756C04CC5C2A86999 /* Pods_ShoppingBasket.framework */; };
 		B29FF12D27A9307200B1B7A1 /* AddEditToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF12C27A9307200B1B7A1 /* AddEditToDoTableViewController.swift */; };
 		B29FF12F27A9313A00B1B7A1 /* toDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF12E27A9313A00B1B7A1 /* toDoList.swift */; };
-		B29FF13327ABD80800B1B7A1 /* ToDoCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF13227ABD80800B1B7A1 /* ToDoCache.swift */; };
 		B2B07B3A277B126100974BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B07B39277B126100974BF2 /* AppDelegate.swift */; };
 		B2B07B3C277B126100974BF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B07B3B277B126100974BF2 /* SceneDelegate.swift */; };
 		B2B07B41277B126100974BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2B07B3F277B126100974BF2 /* Main.storyboard */; };
@@ -52,7 +51,6 @@
 		817285426F00AA6165254E0B /* Pods-ShoppingBasket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingBasket.debug.xcconfig"; path = "Target Support Files/Pods-ShoppingBasket/Pods-ShoppingBasket.debug.xcconfig"; sourceTree = "<group>"; };
 		B29FF12C27A9307200B1B7A1 /* AddEditToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditToDoTableViewController.swift; sourceTree = "<group>"; };
 		B29FF12E27A9313A00B1B7A1 /* toDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoList.swift; sourceTree = "<group>"; };
-		B29FF13227ABD80800B1B7A1 /* ToDoCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCache.swift; sourceTree = "<group>"; };
 		B2B07B36277B126100974BF2 /* ShoppingBasket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingBasket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B07B39277B126100974BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B07B3B277B126100974BF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				B2B07BAB2785CE9800974BF2 /* shoppingBasket.swift */,
 				B29FF12E27A9313A00B1B7A1 /* toDoList.swift */,
 				B2D05E72279BD6ED00C4C147 /* UserCache.swift */,
-				B29FF13227ABD80800B1B7A1 /* ToDoCache.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,7 +400,6 @@
 				B2D05E6B2799615000C4C147 /* GooglePlacesCoordinator.swift in Sources */,
 				B2B07BB52788460400974BF2 /* addEditShoppingItemsTableViewController.swift in Sources */,
 				B29FF12D27A9307200B1B7A1 /* AddEditToDoTableViewController.swift in Sources */,
-				B29FF13327ABD80800B1B7A1 /* ToDoCache.swift in Sources */,
 				B29FF12F27A9313A00B1B7A1 /* toDoList.swift in Sources */,
 				B2B07BAE2785D00900974BF2 /* shoppingListTableViewCell.swift in Sources */,
 				B2B07BAC2785CE9800974BF2 /* shoppingBasket.swift in Sources */,
