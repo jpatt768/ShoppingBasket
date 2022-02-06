@@ -22,15 +22,7 @@ struct ShopItemCache {
             UserDefaults.standard.synchronize()
         }
     }
-    static func setToDoItems(toDoItems: [ToDoItem]) {
-            let list = ToDoItems(toDoItems: toDoItems)
-            if let data = try? JSONEncoder().encode(list),
-               let json = String(data: data, encoding: .utf8) {
-                print("json \(json)")
-                UserDefaults.standard.set(json, forKey: toDoKey)
-                UserDefaults.standard.synchronize()
-            }
-    }
+    
     static func removeItem(idx: Int) {
         var items = getItems()
         items.remove(at: idx)
@@ -54,6 +46,17 @@ struct ShopItemCache {
             return []
         }
     }
+    
+    static func setToDoItems(toDoItems: [ToDoItem]) {
+            let list = ToDoItems(toDoItems: toDoItems)
+            if let data = try? JSONEncoder().encode(list),
+               let json = String(data: data, encoding: .utf8) {
+                print("json \(json)")
+                UserDefaults.standard.set(json, forKey: toDoKey)
+                UserDefaults.standard.synchronize()
+            }
+    }
+    
     static func removeToDoItem(idx: Int) {
         var items = getToDoItems()
         items.remove(at: idx)
@@ -62,7 +65,7 @@ struct ShopItemCache {
     }
 
     static func getToDoItems() -> [ToDoItem] {
-        guard let json = UserDefaults.standard.string(forKey: shopItemKey) else {
+        guard let json = UserDefaults.standard.string(forKey: toDoKey) else {
             print("To-Do json is missing")
             return []
         }

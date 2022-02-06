@@ -46,6 +46,7 @@ class ToDoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             items.remove(at: indexPath.row)
+            ShopItemCache.setToDoItems(toDoItems: items)
             tableView.deleteRows(at: [indexPath], with: .left)
         }
     }
