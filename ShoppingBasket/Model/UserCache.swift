@@ -12,6 +12,7 @@ import Foundation
 struct ShopItemCache {
     static let shopItemKey = "shop.item.key"
     static let toDoKey = "todo.item.key"
+    
     static func setItems(items: [ShopItem]) {
         let list = ShopItems(items: items)
         if let data = try? JSONEncoder().encode(list),
