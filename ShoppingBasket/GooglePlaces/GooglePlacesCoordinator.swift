@@ -11,7 +11,7 @@ import CoreLocation
 
 struct GooglePlacesCoordinator {
     let formatURL: String =
-    "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=1000&type=supermarket&key=AIzaSyBmTTo1UMRrbaQrt6zBq7e9-7wwbvQRDOk"
+    "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=1000&type=supermarket&key=###############"
 
     func fetchLocation(for coordinate: CLLocationCoordinate2D, completion: @escaping (GMSPlaceField) -> Void) {
         let urlString = String(format: formatURL, coordinate.latitude, coordinate.longitude)

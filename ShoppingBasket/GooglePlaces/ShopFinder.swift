@@ -23,7 +23,7 @@ class ShopFinderViewController: UIViewController, CLLocationManagerDelegate{
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        GMSServices.provideAPIKey("AIzaSyBmTTo1UMRrbaQrt6zBq7e9-7wwbvQRDOk")
+        GMSServices.provideAPIKey("#############")
         
         print("License: \n\n\(GMSServices.openSourceLicenseInfo())")
     }
